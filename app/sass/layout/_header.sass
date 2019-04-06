@@ -40,3 +40,126 @@
 .head-contact
   display: inline-block
   white-space: nowrap
+
+.mnu-line
+  background-color: $accent-dark
+  color: #fff
+
+// menu castomization
+.sm-mint
+  border-bottom: none
+  background-color: $accent-dark
+
+.sm-mint
+  a
+    +mt(.2s)
+
+
+.sm-mint a, .sm-mint a.highlighted, .sm-mint a:active, .sm-mint a:focus, .sm-mint a:hover
+  color: #fff
+  font-size: 15px
+  font-family: "ptSans", sans-serif
+  text-transform: uppercase
+  border-radius: 0
+  background-color: $accent-dark
+  height: 60px
+
+  line-height: 60px
+
+.sm-mint a, .sm-mint a:hover, .sm-mint a:active, .sm-mint a:focus, .sm-mint a:hover, .sm-mint a.highlighted
+  padding: 0 10px
+
+.sm-mint a:active, .sm-mint a:focus, .sm-mint a:hover
+  background-color: $accent-green
+
+.sm-mint a.has-submenu
+  padding-right: 42px
+
+.sm-mint a .sub-arrow, .sm-mint a.highlighted .sub-arrow
+  border-color: #fff transparent transparent transparent
+  margin-top: -2px
+
+.sm-mint ul
+  background: $accent-dark
+  color: #fff
+  //padding: 0 10px
+  border-radius: 0
+  padding: 0
+
+
+.sm-mint ul li
+  border-bottom: 1px solid rgba(#fff, .1)
+  box-shadow: none
+  &:last-child
+    border-bottom: none
+
+.sm-mint
+  >li:last-child
+    a
+      padding-left: 46px
+      background-image: url('../img/icons/icon_oferta.png')
+      background-repeat: no-repeat
+      background-position: 10px 50%
+
+.sm-mint ul a, .sm-mint ul a.highlighted, .sm-mint ul a:active, .sm-mint ul a:focus, .sm-mint ul a:hover
+  color: #fff
+  height: auto
+  line-height: 1.2
+  padding: 15px 20px
+  font-size: 14px
+  display: block
+
+.sm-mint ul a.highlighted, .sm-mint ul a:active, .sm-mint ul a:focus, .sm-mint ul a:hover
+  background-color: $accent-green
+  font-size: 14px
+
+.sm-mint ul a .sub-arrow
+  border-color: transparent transparent transparent #fff
+
+.sm-mint ul a.has-submenu
+  padding-right: 30px
+
+.sm-mint ul a.highlighted .sub-arrow
+  margin-top: -4px
+
+.sm-mint ul ul
+  border-radius: 0
+  top: 55px!important
+// end menu castomization
+
+
+
+//mmenu castomization
+
+.hamburger
+  display: none
+
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+  background-color: #fff
+  opacity: 1
+  height: 6px
+  border-radius: 2px
+
+.hamburger--elastic .hamburger-inner:before
+  top: 11px
+
+.hamburger--elastic .hamburger-inner:after
+  top: 22px
+
+.mm-btn_clear:after, .mm-btn_clear:before, .mm-btn_close:after, .mm-btn_close:before
+  border-width: 5px
+
+.mm-menu .mm-btn:after, .mm-menu .mm-btn:before
+  border-color: #fff
+
+.mm-listitem:after
+  border-color: rgba(#fff, .1)
+
+.mm-panel, .mm-panels
+  border: none!important
+
+.mm-listitem .mm-btn_next:before
+  display: none
+
+.mm-navbars_top
+  border-color: rgba(#fff, .1)
