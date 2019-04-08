@@ -5,9 +5,25 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+  .subcat-item
+    svg
+      line.top, line.bottom
+        stroke-dasharray: 330 148
+      line.left, line.right
+        stroke-dasharray: 490 148
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .popular-item-img
+    height: 330px
+  .subcat-item
+    svg
+      line.top, line.bottom
+        stroke-dasharray: 330 268
+      line.left, line.right
+        stroke-dasharray: 490 210
+
   .hamburger
     display: inline-block
 
@@ -29,8 +45,27 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .popular-item-img
+    height: 240px
+
+  .subcat-item
+    svg
+      display: none
+    &-img
+      border: 1px solid #8a8a8a
+
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .popular-item-img
+    height: 310px
+    background-size: contain
+
+  h1
+    font-size: 24px
+  h2
+    font-size: 20px
+
   .top-line
     .container
       flex-direction: column

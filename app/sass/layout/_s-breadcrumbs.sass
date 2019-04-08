@@ -1,0 +1,21 @@
+.s-breadcrumbs
+  margin-top: 60px
+  margin-bottom: 30px
+  a
+    color: #8a8a8a
+    display: inline-block
+    margin-right: 12px
+    position: relative
+    +mt(.2s)
+    &:after
+      content: '/'
+      position: relative
+      left: 6px
+    &:hover
+      color: #23527c
+    &:last-child
+      margin-right: 0
+      &:after
+        display: none
+      &:hover
+        color: #8a8a8a

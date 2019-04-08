@@ -39,10 +39,26 @@ $(document).ready(function(){
     mmenuBtn.click(function() {
         API.open();
     });
-
     /**
      * end mobile-mnu customization
      */
+
+
+    function heightses() {
+
+        if ($(window).width()>=480) {
+            $('.popular-item-model').matchHeight({byRow: true});
+            $('.popular-item-product').matchHeight({byRow: true});
+
+        }
+    }
+
+    $(window).resize(function() {
+        heightses();
+    });
+
+    heightses();
+
 
     //E-mail Ajax Send
     $("form").submit(function() { //Change
