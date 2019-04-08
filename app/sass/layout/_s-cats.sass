@@ -1,0 +1,39 @@
+.s-cats
+  padding: 35px 0
+
+.cats-wrap
+  display: flex
+  justify-content: space-around
+
+.cat-item
+  width: calc(33.333% - 2px)
+  height: 303px
+  +bg-cover
+  position: relative
+  overflow: hidden
+  &-desc
+    position: absolute
+    width: 100%
+    padding: 10px
+    color: #fff
+    top: calc(100% - 40px)
+    //bottom: -62px
+    left: 0
+    z-index: 3
+    text-align: center
+    background-color: $accent-dark
+    +mt(.5s)
+    .title
+      font-size: 18px
+      text-transform: uppercase
+      display: block
+      margin-bottom: 15px
+      line-height: 1
+    .desc
+      line-height: -1
+      font-size: 14px
+  &:hover
+    .cat-item-desc
+      background-color: rgba($accent-yellow, .6)
+      //bottom: 0
+      top: calc(100% - 100px)

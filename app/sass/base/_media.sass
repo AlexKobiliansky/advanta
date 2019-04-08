@@ -5,6 +5,10 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .cat-item
+    height: 240px
+
   .subcat-item
     svg
       line.top, line.bottom
@@ -45,6 +49,14 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .cats-wrap
+    flex-wrap: wrap
+
+  .cat-item
+    width: 100%
+    margin-bottom: 5px
+    height: 400px
+
   .popular-item-img
     height: 240px
 
@@ -56,6 +68,9 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .cat-item
+    height: 250px
 
   .popular-item-img
     height: 310px
