@@ -1,0 +1,78 @@
+.s-stock
+  padding: 40px 0
+
+.stock-slider
+  background-color: #f7f7f7
+  border-radius: 5px
+  overflow: hidden
+  padding: 20px 40px
+  border: 1px solid rgba(#a8a8a8, .3)
+  box-shadow: 0 0 35px 2px rgba(#000, .1)
+
+
+.stock-slide
+  display: flex
+  line-height: 1.3
+  &-content
+    width: 70%
+    padding: 20px 0 20px 30px
+  &-model
+    font-size: 19px
+    font-weight: bold
+    text-transform: uppercase
+  &-product
+    text-transform: uppercase
+    font-size: 19px
+  &-prices
+    margin-top: 30px
+    .old
+      color: #828282
+      font-size: 19px
+      text-decoration: line-through
+    .new
+      color: $accent-red
+      font-weight: bold
+      font-size: 21px
+  .btn
+    margin-top: 30px
+
+
+.stock-wrap
+  position: relative
+
+.stock-title
+  font-size: 19px
+  font-weight: bold
+  text-transform: uppercase
+  color: #fff
+  background-color: $accent-red
+  padding: 1px 10px
+  position: absolute
+  left: calc(50% - 72px)
+  display: inline-block
+  line-height: 1.3
+  z-index: 2
+  top: -12px
+  &:after
+    content: ''
+    width: 0
+    height: 0
+    border: 13px solid transparent
+    border-top-color: $accent-red
+    border-bottom-color: $accent-red
+    border-left-color: $accent-red
+    position: absolute
+    right: -24px
+    top: 0
+  &:before
+    content: ''
+    position: absolute
+    width: 0
+    height: 0
+    border: 13px solid transparent
+    border-top-color: $accent-red
+    border-bottom-color: $accent-red
+    border-right-color: $accent-red
+    left: -24px
+    top: 0
+

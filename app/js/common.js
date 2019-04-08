@@ -49,7 +49,11 @@ $(document).ready(function(){
         if ($(window).width()>=480) {
             $('.popular-item-model').matchHeight({byRow: true});
             $('.popular-item-product').matchHeight({byRow: true});
+        }
 
+        if ($(window).width()>=992) {
+            $('.stock-slide-model').matchHeight({byRow: true});
+            $('.stock-slide-product').matchHeight({byRow: true});
         }
     }
 
@@ -58,6 +62,24 @@ $(document).ready(function(){
     });
 
     heightses();
+
+    $('.stock-slider').owlCarousel({
+        loop:true,
+        nav: true,
+        items: 2,
+        margin: 15,
+        dots: false,
+        autoHeight: false,
+        navText: ["<i class=\"fa fa-chevron-left\"></i>","<i class=\"fa fa-chevron-right\"></i>"],
+        responsive: {
+            0: {
+                items: 1
+            },
+            992: {
+                items: 2
+            }
+        }
+    });
 
 
     //E-mail Ajax Send

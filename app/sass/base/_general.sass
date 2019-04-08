@@ -71,6 +71,7 @@ ul
   text-transform: uppercase
   border-radius: 30px
   line-height: 1.2
+  text-align: center
   &:hover, &:active, &:focus
     opacity: .8
     color: #fff
@@ -130,6 +131,25 @@ p
     padding-left: 40px
     margin-bottom: 15px
 
+
+.owl-carousel
+  position: relative
+  .owl-nav
+    font-size: 25px
+    color: #acacac
+    position: absolute
+    top: calc(50% - 20px)
+    left: 0
+    width: 100%
+    button.owl-prev, button.owl-next
+      position: absolute
+      +mt(.3s)
+      &:hover
+        color: $accent-yellow
+    button.owl-prev
+      left: 15px
+    button.owl-next
+      right: 15px
 
 
 
