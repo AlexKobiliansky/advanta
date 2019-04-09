@@ -44,6 +44,17 @@ $(document).ready(function(){
      */
 
 
+    /**
+     * side-mnu customization
+     */
+    $('ul.side-mnu').superfish({
+        animation: {opacity:'show', top: 0},
+        animationOut: {opacity:'hide', top: 30},
+        delay:		 300,
+        speed: 'fast'
+    });
+
+
     function heightses() {
 
         if ($(window).width()>=480) {
@@ -81,17 +92,52 @@ $(document).ready(function(){
         }
     });
 
+    $('.side-slider').owlCarousel({
+        loop:true,
+        nav: true,
+        items: 1,
+        margin: 15,
+        dots: false,
+        autoHeight: true,
+        navText: ["<i class=\"fa fa-chevron-left\"></i>","<i class=\"fa fa-chevron-right\"></i>"],
+    });
+
+
+    $(function() {
+        $("a[href='#callback']").magnificPopup({
+            type: "inline",
+            fixedContentPos: !1,
+            fixedBgPos: !0,
+            overflowY: "auto",
+            closeBtnInside: !0,
+            preloader: !1,
+            midClick: !0,
+            removalDelay: 300,
+            mainClass: "my-mfp-zoom-in"
+        })
+    });
+
+    $.validate({
+        form : '.contact-form',
+        scrollToTopOnError: false
+    });
 
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);
+        var t = th.find(".btn").text();
+        th.find(".btn").prop("disabled", "disabled").addClass("disabled").text("Отправлено!");
 
         $.ajax({
             type: "POST",
             url: "mail.php", //Change
             data: th.serialize()
         }).done(function() {
-
+            setTimeout(function() {
+                th.find(".btn").removeAttr('disabled').removeClass("disabled").text(t);
+                th.trigger("reset");
+                $.magnificPopup.close();
+            }, 2000);
         });
         return false;
     });
