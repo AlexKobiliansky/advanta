@@ -74,6 +74,12 @@ $(document).ready(function(){
 
     heightses();
 
+
+
+
+
+
+
     $('.stock-slider').owlCarousel({
         loop:true,
         nav: true,
@@ -103,8 +109,49 @@ $(document).ready(function(){
     });
 
 
+    $('.prod-slider').owlCarousel({
+        loop:true,
+        nav:false,
+        items: 1,
+        thumbs: true,
+        dots: false,
+        thumbsPrerendered: true,
+        thumbItemClass: 'nav-item',
+        animateIn: "fadeIn",
+        animateOut: "fadeOut",
+        // responsive: {
+        //     0: {
+        //         dots: true,
+        //         margin: 15,
+        //         mouseDrag: true,
+        //         nav: false
+        //     },
+        //     768: {
+        //         dots: false,
+        //         margin: 0,
+        //         mouseDrag: false,
+        //         nav: false
+        //     }
+        // }
+    });
+
+    $('.prod-slide').photoswipe();
+
+    $('.product-rate').raty({
+        path: "libs/raty/img/"
+    });
+
+    $('a[href="#order-form"]').on('click', function(){
+       var  th = $(this),
+            model = th.data('model'),
+            price = th.data('price');
+
+       $('#order-data').val(model + ' (цена: ' + price + ")")
+
+    });
+
     $(function() {
-        $("a[href='#callback']").magnificPopup({
+        $("a[href='#callback'], a[href='#order-form']").magnificPopup({
             type: "inline",
             fixedContentPos: !1,
             fixedBgPos: !0,

@@ -48,6 +48,10 @@ gulp.task('scripts', function() {
 		'app/libs/magnificPopup/jquery.magnific-popup.min.js',
 		'app/libs/superfish/hoverIntent.js',
 		'app/libs/superfish/superfish.min.js',
+        'app/libs/photoswipe/photoswipe.min.js',
+        'app/libs/photoswipe/photoswipe-ui-default.min.js',
+        'app/libs/photoswipe/jquery.photoswipe.js',
+		'app/libs/raty/jquery.raty.min.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
