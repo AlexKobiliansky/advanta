@@ -55,6 +55,13 @@ $(document).ready(function(){
     });
 
 
+    function hidePreload() {
+        $('.preloader').fadeOut();
+    }
+
+    hidePreload();
+
+
     function heightses() {
 
         if ($(window).width()>=480) {
@@ -190,7 +197,7 @@ $(document).ready(function(){
     });
 
     $(function() {
-        $("a[href='#callback'], a[href='#order-form']").magnificPopup({
+        $("a[href='#callback'], a[href='#order-form'], a[href='#recall']").magnificPopup({
             type: "inline",
             fixedContentPos: !1,
             fixedBgPos: !0,

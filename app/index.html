@@ -27,8 +27,26 @@
 </head>
 
 <body>
+<!-- preloader start -->
+<div class="preloader">
+	<div class="sk-cube-grid">
+		<div class="sk-cube sk-cube-1"></div>
+		<div class="sk-cube sk-cube-2"></div>
+		<div class="sk-cube sk-cube-3"></div>
+		<div class="sk-cube sk-cube-4"></div>
+		<div class="sk-cube sk-cube-5"></div>
+		<div class="sk-cube sk-cube-6"></div>
+		<div class="sk-cube sk-cube-7"></div>
+		<div class="sk-cube sk-cube-8"></div>
+		<div class="sk-cube sk-cube-9"></div>
+	</div>
+</div>
+<!-- preloader end -->
+
+
 <div id="page-container">
 	<div class="page-wrap">
+		<a href="#recall" class="btn btn-red btn-fixed"><i class="fa fa-phone" aria-hidden="true"></i><span>Заказать звонок</span></a>
 		<div class="page-content">
 			<!-- mobile-mnu -->
 			<nav id="mobile-mnu">
@@ -293,6 +311,43 @@
 					</div>
 				</div>
 			</form>
+
+
+
+			<form class="contact-form popup-form" id="recall">
+
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="Name">
+				<input type="hidden" name="admin_email" value="alexey.kobilianskiy@gmail.com">
+				<input type="hidden" name="form_subject" value="Заявка с сайта Name">
+				<!-- END Hidden Required Fields -->
+
+				<input type="hidden" name="Форма" value="Заказ обратного звонка">
+
+				<h2>Заказать обратный звонок</h2>
+
+				<div class="form-labels-wrap">
+					<label>
+						<span class="required">Ваше имя</span>
+						<input type="text" name="Имя" autocomplete="off" data-validation="required">
+					</label>
+					<label>
+						<span class="required">Ваш телефон</span>
+						<input type="text" name="Телефон"
+							   autocomplete="off" data-validation="number">
+					</label>
+					<label class="check">
+						<input type="checkbox" class="privacy-check" data-validation="required">
+						<span><a href="#0" target="_blank"> Вы соглашаетесь на обработку персональных данных <i class="fa fa-external-link" aria-hidden="true"></i></a></span>
+
+					</label>
+					<div class="btn-wrap">
+						<button type="submit" class="btn btn-yellow">Отправить</button>
+					</div>
+				</div>
+			</form>
+
+
 		</div>
 
 	</div><!-- /page-wrap -->

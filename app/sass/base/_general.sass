@@ -236,7 +236,12 @@ form
   padding: 35px 70px 50px
   border-radius: 15px
   position: relative
-
+  h2
+    text-transform: uppercase
+    margin-bottom: 30px
+    font-size: 18px
+    text-align: center
+    font-weight: bold
 
 //MY_MFP_ZOOM_IN
 .my-mfp-zoom-in
@@ -275,5 +280,93 @@ form
 
 .s-page
   padding-bottom: 50px
+
+
+.btn-fixed
+  position: fixed
+  top: 70%
+  right: 0
+  padding-left: 20px
+  padding-right: 20px
+  padding-bottom: 12px
+  z-index: 100
+  i
+    font-size: 22px
+    margin-right: 5px
+    position: relative
+    top: 3px
+
+
+//preloader
+.preloader
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 10000
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: #f6f6f6
+
+.sk-cube-grid
+  width: 7em
+  height: 7em
+  margin: auto
+
+.sk-cube-grid .sk-cube
+  width: 33%
+  height: 33%
+  background-color: $accent-yellow
+  float: left
+  animation: sk-cube-grid-scale-delay 1.3s infinite ease-in-out
+
+.sk-cube-grid .sk-cube-1
+  animation-delay: 0.2s
+
+.sk-cube-grid .sk-cube-2
+  animation-delay: 0.3s
+
+.sk-cube-grid .sk-cube-3
+  animation-delay: 0.4s
+
+.sk-cube-grid .sk-cube-4
+  animation-delay: 0.1s
+
+.sk-cube-grid .sk-cube-5
+  animation-delay: 0.2s
+
+.sk-cube-grid .sk-cube-6
+  animation-delay: 0.3s
+
+.sk-cube-grid .sk-cube-7
+  animation-delay: 0s
+
+.sk-cube-grid .sk-cube-8
+  animation-delay: 0.1s
+
+.sk-cube-grid .sk-cube-9
+  animation-delay: 0.2s
+
+
+@-webkit-keyframes sk-cube-grid-scale-delay
+  0%, 70%, 100%
+    transform: scale3D(1, 1, 1)
+
+  35%
+    transform: scale3D(0, 0, 1)
+
+
+
+@keyframes sk-cube-grid-scale-delay
+  0%, 70%, 100%
+    transform: scale3D(1, 1, 1)
+
+  35%
+    transform: scale3D(0, 0, 1)
+//end preloader
 
 
